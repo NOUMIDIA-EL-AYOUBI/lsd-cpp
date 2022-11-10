@@ -39,6 +39,21 @@ int check(char* s)
 }
 
 
+void	*Memset(void *b, int c, size_t len)
+{
+	size_t	i;
+	char	*str;
+
+	str = (char*)b;
+	i = 0;
+	while (i < len)
+	{
+		str[i] = (char)c;
+		i++;
+	}
+	return (str);
+}
+
 char * getline_return( )
 {
     int i=0;
@@ -113,7 +128,7 @@ char* get_next_line (int fd)
 		printf("%c", line[i]);
 		i++;
 	}
-	memset(s,0,strlen(s));
+	Memset(s,0,strlen(s));
 	int j=0;
 	while( extra [j]!= '\0')
 	{
