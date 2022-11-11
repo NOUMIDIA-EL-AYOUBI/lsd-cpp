@@ -115,7 +115,6 @@ char * extraread()
 
 char* get_line (int fd)
 {
-	// if fd or buffer_size non valid return null
 	read_file (fd);
 	if (s == NULL)
 		exit(EXIT_FAILURE);
