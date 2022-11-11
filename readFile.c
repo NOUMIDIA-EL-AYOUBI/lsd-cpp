@@ -113,7 +113,7 @@ char * extraread()
 	
 
 
-char* get_next_line (int fd)
+char* get_line (int fd)
 {
 	// if fd or buffer_size non valid return null
 	read_file (fd);
@@ -146,7 +146,7 @@ int main()
     int fd = open("test.txt", O_RDONLY );
     for (int i=0; i<4; i++)
     {
-    	get_next_line(fd);
+    	get_line(fd);
     }
     return 0;
     int i=0;
