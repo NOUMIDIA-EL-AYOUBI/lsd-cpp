@@ -12,7 +12,6 @@ void generateRandomMatrix(int n, vector<vector<type>> &matrix)
   for (int i = 0; i < n; i++)
     for (int j = 0; j < n; j++)
     {
-       srand(time(NULL));
        matrix[i][j] =  rand()%10;
     }
 }
